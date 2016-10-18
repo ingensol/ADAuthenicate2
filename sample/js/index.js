@@ -97,7 +97,8 @@ var app = {
                 app.error("Failed to acquire token: " + pre(err));
             });
     },
-    acquireTokenSilent: function() {
+    acquireTokenSilent: function () {
+        app.log('acquireTokenSilent: ');
         if (app.authContext == null) {
             app.error('Authentication context isn\'t created yet. Create context first');
             return;
