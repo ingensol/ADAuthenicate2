@@ -52,6 +52,8 @@ var app = {
         app.logArea = document.getElementById("log-area");
         app.log("Cordova initialized, 'deviceready' event was fired");
         AuthenticationContext = Microsoft.ADAL.AuthenticationContext;
+        app.createContext();
+        app.acquireTokenSilent();
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
@@ -117,8 +119,9 @@ var app = {
             }, function(err) {
                 app.error("Failed to acquire token silently: " + pre(err));
             });
-        }, function(err) {
-            app.error("Unable to get User ID from token cache. Have you acquired token already? " + pre(err));
+        }, function (err) {
+            app.acquireToken();
+            //app.error("Unable to get User ID from token cache. Have you acquired token already? " + pre(err));
         });
     },
     readTokenCache: function () {
