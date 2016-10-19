@@ -53,7 +53,7 @@ var app = {
         app.log("Cordova initialized, 'deviceready' event was fired");
         AuthenticationContext = Microsoft.ADAL.AuthenticationContext;
         app.createContext();
-        app.acquireTokenSilent();
+        
     },
     // Update DOM on a Received Event
     receivedEvent: function (id) {
@@ -83,6 +83,7 @@ var app = {
         AuthenticationContext.createAsync(authority)
         .then(function (context) {
             app.authContext = context;
+            app.acquireTokenSilent();
             app.log("Created authentication context for authority URL: " + context.authority);
         }, app.error);
     },
