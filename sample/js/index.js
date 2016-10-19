@@ -95,8 +95,9 @@ var app = {
         }
 
         app.authContext.acquireTokenAsync(resourceUrl, appId, redirectUrl)
-            .then(function(authResult) {
-                app.log('Acquired token successfully: ' + pre(authResult));
+            .then(function (authResult) {
+                window.location = 'feed.html';
+                //app.log('Acquired token successfully: ' + pre(authResult));
             }, function(err) {
                 app.error("Failed to acquire token: " + pre(err));
             });
