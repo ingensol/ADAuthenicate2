@@ -51,7 +51,7 @@ var app = {
     onDeviceReady: function () {
         // app.receivedEvent('deviceready');
         app.logArea = document.getElementById("log-area");
-        app.log("Cordova initialized, 'deviceready' event was fired");
+      //  app.log("Cordova initialized, 'deviceready' event was fired");
         AuthenticationContext = Microsoft.ADAL.AuthenticationContext;
         app.createContext();
         
@@ -85,7 +85,7 @@ var app = {
         .then(function (context) {
             app.authContext = context;
             app.acquireTokenSilent();
-            app.log("Created authentication context for authority URL: " + context.authority);
+           // app.log("Created authentication context for authority URL: " + context.authority);
         }, app.error);
     },
     acquireToken: function () {
@@ -103,7 +103,7 @@ var app = {
             });
     },
     acquireTokenSilent: function () {
-        app.log('acquireTokenSilent: ');
+       // app.log('acquireTokenSilent: ');
         if (app.authContext == null) {
             app.error('Authentication context isn\'t created yet. Create context first');
             return;
