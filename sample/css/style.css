@@ -15,7 +15,7 @@ body.left-nav .topcoat-navigation-bar, body.left-nav .main-content {
     left:250px;
 }
 .topcoat-navigation-bar {
-    position:absolute;
+   /* position:absolute;*/
     width:100%;
     z-index:100;
     transition: left 0.2s ease-out;
