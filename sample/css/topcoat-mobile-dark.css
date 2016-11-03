@@ -1182,7 +1182,7 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
 .topcoat-icon-button--quiet,
 .topcoat-icon-button--large,
 .topcoat-icon-button--large--quiet {
-  padding: 0 0.5rem;
+  padding: 0 0.75rem;
   line-height: 3rem;
   letter-spacing: 1px;
   color: #c6c8c8;
@@ -1334,7 +1334,7 @@ input[type="checkbox"]:disabled:active + .topcoat-checkbox__checkmark:before {
   display: inline-block;
   vertical-align: top;
   overflow: hidden;
-  width: 1rem;
+  width: 1.62rem;
   height: 1.62rem;
   vertical-align: middle;
   top: -1px;
