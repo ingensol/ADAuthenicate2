@@ -97,7 +97,7 @@ button.topcoat-button--cta {
         display:none;
     }
     .main-content {
-        left:320px;
+        /*left:320px;*/
         right:0;
         width:auto;
     }
