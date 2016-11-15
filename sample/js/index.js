@@ -184,5 +184,7 @@ var app = {
         request.onerror = function(e) {
             app.error("Data Request Failed: " + e.target.response);
         };
+
+        request.send();
     }
 };
