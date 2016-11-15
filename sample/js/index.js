@@ -162,6 +162,6 @@ var app = {
         });
     },
     searchForUsers: function() {
-        alert("search button pressed");
+        app.log("button pressed", false);
     }
 };
