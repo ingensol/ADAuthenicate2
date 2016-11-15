@@ -46,10 +46,11 @@
             <h1 class="topcoat-navigation-bar__title">Send Trojan Point</h1>
         </div>
     </div>            
-    <div class="topcoat-list__container scroller">
-        <ul class="topcoat-list list" id="log-area"></ul>
-    </div>          
-
+    <div class="main-content">
+        <div class="topcoat-list__container scroller">
+            <ul class="topcoat-list list" id="log-area"></ul>
+        </div>          
+        
         <div class="searchpanel">
             <div class="searchinput">
                 <p>5 of 5 Trojan Points to award today!</p>
@@ -60,49 +61,52 @@
             </div>
 
             <div id="searchResults"></div>
-
-            <div>
-                <p>Attribute:</p>
-                <ul style="list-style-type: none">
-                    <li>
-                        <label class="topcoat-checkbox">
-                            <input type="checkbox" name="ownedit">
-                            <div class="topcoat-checkbox__checkmark"></div> Owned It
-                        </label>
-                    </li>
-                    <li>
-                        <label class="topcoat-checkbox">
-                            <input type="checkbox" name="extraway">
-                            <div class="topcoat-checkbox__checkmark"></div> Extra Way
-                        </label>
-                    </li>
-                    <li>
-                        <label class="topcoat-checkbox">
-                            <input type="checkbox" name="teamplayer">
-                            <div class="topcoat-checkbox__checkmark"></div> Team Player 
-                        </label>
-                    </li>
-                    <li>
-                        <label class="topcoat-checkbox">
-                            <input type="checkbox" name="awesome">
-                            <div class="topcoat-checkbox__checkmark"></div> Awesome 
-                        </label>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <p>Comments:</p>
-                <textarea class="topcoat-textarea" rows="1" cols="10" id="comments" placeholder="Enter comments here ..." >
-                </textarea>
-            </div>
+        </div>
+        <div class="trojanBuckInfoArea">
+            <p>Attribute:</p>
+            <ul style="list-style-type: none">
+                <li>
+                    <label class="topcoat-checkbox">
+                        <input type="checkbox" name="ownedit">
+                        <div class="topcoat-checkbox__checkmark"></div> Owned It
+                    </label>
+                </li>
+                <li>
+                    <label class="topcoat-checkbox">
+                        <input type="checkbox" name="extraway">
+                        <div class="topcoat-checkbox__checkmark"></div> Extra Way
+                    </label>
+                </li>
+                <li>
+                    <label class="topcoat-checkbox">
+                        <input type="checkbox" name="teamplayer">
+                        <div class="topcoat-checkbox__checkmark"></div> Team Player 
+                    </label>
+                </li>
+                <li>
+                    <label class="topcoat-checkbox">
+                        <input type="checkbox" name="awesome">
+                        <div class="topcoat-checkbox__checkmark"></div> Awesome 
+                    </label>
+                </li>
+            </ul>
+            
+            <p>Comments:</p>
+            <textarea class="topcoat-textarea" rows="1" cols="10" id="comments" placeholder="Enter comments here ..." >
+            </textarea>
+            
             <button class="topcoat-button-bar__button topcoat-button--cta" id="btnSubmit">Submit</button>
         </div>
+    </div>
 
         <div class="container error">
             <div class="topcoat-button-bar full">
                 <div class="topcoat-button-bar__item full center" id="error"></div>
             </div>
         </div
+
+    </div>
+
 
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="cordova.js"></script>
