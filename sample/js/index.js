@@ -7,6 +7,7 @@ var authority = 'https://login.windows.net/keckmedicine.onmicrosoft.com';
 var resourceUrl = 'https://graph.windows.net/';
 var appId = '2b12cfe7-b4d8-4256-9072-ca27dade4e55';
 var redirectUrl = 'http://localhost:4400/services/aad/redirectTarget.html';
+var graphVersion = "2013-11-08";
   
 var tenantName = 'keckmedicine.onmicrosoft.com';
 var endpointUrl = resourceUrl + tenantName;
@@ -43,6 +44,7 @@ var app = {
         }
 
         document.getElementById('slide-menu-button').addEventListener('click', toggleMenu);
+        document.getElementById('btnSearch').addEventListener('click', searchForUsers);
     },
     // deviceready Event Handler
     //
@@ -96,7 +98,8 @@ var app = {
 
         app.authContext.acquireTokenAsync(resourceUrl, appId, redirectUrl)
             .then(function (authResult) {
-                window.location = 'feed.html';
+                window.location = 'search.html';
+                //window.location = 'feed.html';
                 //app.log('Acquired token successfully: ' + pre(authResult));
             }, function(err) {
                 app.error("Failed to acquire token: " + pre(err));
@@ -157,5 +160,8 @@ var app = {
         }, function (err) {
             app.error("Failed to clear token cache: " + pre(err));
         });
+    },
+    searchForUsers: function() {
+        alert("search button pressed");
     }
 };
