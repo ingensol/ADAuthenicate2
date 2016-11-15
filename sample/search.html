@@ -53,7 +53,7 @@
         <div class="searchpanel">
             <div class="searchinput">
                 <p>5 of 5 Trojan Points to award today!</p>
-                Peer: <input class="topcoat-search-input full" id="searchfield" type="search" placeholder="Enter name ...">
+                Peer: <input class="topcoat-search-input" id="searchfield" type="search" placeholder="Enter name ...">
             </div>
             <div class="searchbutton">
                 <button class="topcoat-button-bar__button topcoat-button--cta" id="btnSearch">Search</button>
@@ -61,17 +61,38 @@
             <div>
                 <p>Attribute:</p>
                 <ul>
-                    <li><input type="checkbox" name="ownedit"> Owned it</li>
-                    <li><input type="checkbox" name="extraway"> Extra Way</li>
-                    <li><input type="checkbox" name="teamplayer"> Team Player</li>
-                    <li><input type="checkbox" name="awesome"> Awesome</li>
+                    <li>
+                        <label class="topcoat-checkbox">
+                            <input type="checkbox" name="ownedit">
+                            <div class="topcoat-checkbox__checkmark"></div> Owned It
+                        </label>
+                    </li>
+                    <li>
+                        <label class="topcoat-checkbox">
+                            <input type="checkbox" name="extraway">
+                            <div class="topcoat-checkbox__checkmark"></div> Extra Way
+                        </label>
+                    </li>
+                    <li>
+                        <label class="topcoat-checkbox">
+                            <input type="checkbox" name="teamplayer">
+                            <div class="topcoat-checkbox__checkmark"></div> Team Player 
+                        </label>
+                    </li>
+                    <li>
+                        <label class="topcoat-checkbox">
+                            <input type="checkbox" name="awesome">
+                            <div class="topcoat-checkbox__checkmark"></div> Awesome 
+                        </label>
+                    </li>
                 </ul>
             </div>
             <div>
                 <p>Comments:</p>
-                <textarea id="comments" >
+                <textarea class="topcoat-textarea" rows="3" cols="5" id="comments" placeholder="Enter comments here ..." >
+                </textarea>
             </div>
-                <button class="topcoat-button-bar__button topcoat-button--cta" id="btnSubmit">Submit</button>
+            <button class="topcoat-button-bar__button topcoat-button--cta" id="btnSubmit">Submit</button>
         </div>
 
         <div class="container error">
