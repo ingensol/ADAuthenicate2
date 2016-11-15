@@ -162,6 +162,27 @@ var app = {
         });
     },
     searchForUsers: function() {
-        app.log("button pressed", false);
+        var request = new XMLHttpRequest();
+        var url = resourceUrl + "/" +  appId + "/users?api-version" + graphVersion;
+        var searchText = "edwin.panameno"; // document.getElementById("searchField").value;
+        
+        // currently usign mailNickName ... can something better be used (i.e. display name?)
+        url = searchText ? url + "&filter=mailNickName eq '" + searchText + "'" : url + "&top=10";
+
+        request.open("GET", url, true)
+        request.setRequestHeader("Authorization", "Bearer " + authResult.accessToken);
+
+        request.onload = function(e) {
+            if(e.target.status >= 200 & e.target.status < 300) {
+                // show the result to the user
+                var resultsDiv = document.getElementById("searchResults");
+                resultsDiv.innerHTML = JSON.parse(e.target.parent);
+            }
+            app.error("Data Request Failed: " + e.target.response);
+        };
+
+        request.onerror = function(e) {
+            app.error("Data Request Failed: " + e.target.response);
+        };
     }
 };
