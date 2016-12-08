@@ -51,9 +51,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
-        // app.receivedEvent('deviceready');
+         app.receivedEvent('deviceready');
         app.logArea = document.getElementById("log-area");
-      //  app.log("Cordova initialized, 'deviceready' event was fired");
+        app.log("Cordova initialized, 'deviceready' event was fired");
         AuthenticationContext = Microsoft.ADAL.AuthenticationContext;
         app.createContext();
         
