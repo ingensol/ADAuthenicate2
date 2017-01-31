@@ -50,7 +50,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
          app.receivedEvent('deviceready');
-        app.logArea = document.getElementById("log-area");  
+        app.logArea = document.getElementById("log-area");
         app.log("Cordova initialized, 'deviceready' event was fired");
         AuthenticationContext = Microsoft.ADAL.AuthenticationContext;
         app.createContext();
