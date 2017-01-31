@@ -157,7 +157,7 @@ var app = {
         }, function (err) {
             app.error("Failed to clear token cache: " + pre(err));
         });
-<<<<<<< HEAD
+
     },
     searchForUsers: function() {
         var request = new XMLHttpRequest();
@@ -184,7 +184,5 @@ var app = {
         };
         
         request.send();
-=======
->>>>>>> parent of 99bfa8a... Added search page
     }
 };
